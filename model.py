@@ -1,11 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
+# Задаем параметр (измените значения в зависимости от вашего контекста)
 
 phi = np.degrees(90)
 phi_final1 = 60
 phi_final2 = 45
 phi_final3 = 30
-U = 72
+U = 77.65
 S = 83.28
 m0 = 292000
 gamma1 = 1861
@@ -52,10 +53,13 @@ for t in time:
     if t == 120:
         m0 -= 63000
     elif 72 <= t < 120:
+        U = 64.2
         gamma = gamma2
     elif 120 <= t < 290:
+        U = 0
         gamma = 0
     else:
+        U = 50.2
         gamma = gamma3
 
     m0 -= gamma * dt  # Уменьшаем массу
