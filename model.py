@@ -47,7 +47,7 @@ heights = []
 for t in time:
     print(str(h[-1]))
     if t < 72:
-        gamma = gamma1
+        gamma = gamma1 + gamma2
     if t == 73:
         m0 -= 48000
     if t == 120:
